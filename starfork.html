@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <meta name = "viewport" content = "with=device-width, inital-scale=1.0">
+        <title> Build in HTML</title> 
+        <link rel="stylesheet" href="styles.css" /> 
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <section class = "sub-header">
+            <nav>
+               <a href="index.html"><img src="images/logo.png"></a>
+                <div class = "nav-links" id="navLinks">
+                   <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="about-fork.html">About fork() in C</a></li>
+                        <li><a href="examples.html"> Animated Examples</a></li>
+                        <li><a href="resources.html">More Resources</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <h1>Animated Example #5</h1>
+        </section>
+        
+       
+         <!---Videoplayer-->
+         <section class = "video-player">
+              <div class="row">
+                <div class="vid-col">
+                   <img src="images/code-images/starfork.png">
+                </div>
+                <div class="vid-col">
+                  <h1>Starfork</h1>
+                  <p>Try to hand trace the output of this code by drawing a fork diagram, keeping track of each process and their function calls. When you're ready to check your answer, press the button below and watch the animation to see how I draw a fork diagram for this program.</p>
+                  <div class="output">
+                    <a class="blue-btn" onclick="showO()">Show Answer</a>
+                    <a class="blue-btn" onclick="hideO()">Hide Answer</a>
+                    <p id="revoutput">*<br>**<br>**<br>*<br><br>The output for this program is fixed. This means that the order of the output does not change from one run to another because waitpid() essentially adds "order" to the star() calls.</p>
+                 </div>
+                </div>
+              </div>
+              <h4>Now, click play to watch an animated visualization of this program. Pay special attention to the effect that a waitpid() call has on each parent process, the star() calls, and the changing values of the variables n and i:</h4>
+              <video controls>
+                    <source src = "videos/starfork.mov" type="video/mp4">
+              </video>
+          
+        </section>
+
+           <!---footer-->
+           <section class = "footer"> 
+            <p><em>made with <i class="fa fa-heart-o"></i> by a former cs3157 student</em></p>
+        </section>
+         
+         <!--- javaScript for Toggle Menu --->
+         <script>
+             var navLinks = document.getElementById("navLinks");
+             function showMenu(){
+                 navLinks.style.right = "0px";
+             }
+             function hideMenu(){
+                 navLinks.style.right = "-200px";
+             }
+         </script>
+
+         <!--- javaScript for revealing the output --->
+         <script>
+            var revoutput = document.getElementById("revoutput");
+            function showO(){
+                revoutput.style.color = "#020F49";
+            }
+            function hideO(){
+                revoutput.style.color = "#fff";
+            }
+        </script>
+     </body>
+ </html>
+
+         

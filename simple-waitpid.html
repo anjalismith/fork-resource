@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <meta name = "viewport" content = "with=device-width, inital-scale=1.0">
+        <title> Build in HTML</title> 
+        <link rel="stylesheet" href="styles.css" /> 
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <section class = "sub-header">
+            <nav>
+               <a href="index.html"><img src="images/logo.png"></a>
+               <div class = "nav-links" id="navLinks">
+                   <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="about-fork.html">About fork() in C</a></li>
+                        <li><a href="examples.html"> Animated Examples</a></li>
+                        <li><a href="resources.html">More Resources</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <h1>Animated Example #4</h1>
+        </section>
+        
+        <!---Videoplayer-->
+        <section class = "video-player">
+            <div class="row">
+                <div class="vid-col">
+                   <img src="images/code-images/simplewait.png">
+                </div>
+
+                <div class="vid-col">
+                  <h1>A Simple Wait</h1>
+                  <p>Notice the effect of the waitpid() call on the parent process: after the parent calls waitpid(), it "waits" for the child process to terminate before it continues to execute the subsequent lines of code. Read more about the waitpid() function at the <a href="https://linux.die.net/man/2/waitpid"> Linux Man Page</a>. Try to hand trace the output of this code by drawing a fork diagram, keeping track of each process and their function calls. When you're ready to check your answer, press the button below and watch the animation to see how I draw a fork diagram for this program.</p>
+                  <div class="output">
+                      <a class="blue-btn" onclick="showO()">Show Answer</a>
+                      <a class="blue-btn" onclick="hideO()">Hide Answer</a>
+                      <p id="revoutput">I'm the child!<br>I'm the parent, and I'm done waiting!<br><br>The output for this program is fixed. This means that the order of the output does not change from one run to another because waitpid() essentially adds "order" to the printf() statements.</p>
+                  </div>
+                </div>
+            </div>
+            <h4>Now, click play to watch an animated visualization of this program. I choose to represent each process with a horizontal line, and each fork() call with a vertical line. Pay special attention to how the waitpid() call affects the parent process: </h4>
+            <video controls>
+                <source src = "videos/simplewaitpid.mov" type="video/mp4">
+            </video>
+        </section>
+
+        <!---footer-->
+        <section class = "footer"> 
+            <p><em>made with <i class="fa fa-heart-o"></i> by a former cs3157 student</em></p>
+        </section>
+         
+        <!--- javaScript for Toggle Menu --->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0px";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+
+        <!--- javaScript for revealing the output --->
+        <script>
+            var revoutput = document.getElementById("revoutput");
+            function showO(){
+                revoutput.style.color = "#020F49";
+            }
+            function hideO(){
+                revoutput.style.color = "#fff";
+            }
+        </script>
+    </body>
+</html>
+
+         

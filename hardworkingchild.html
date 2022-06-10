@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <meta name = "viewport" content = "with=device-width, inital-scale=1.0">
+        <title> Build in HTML</title> 
+        <link rel="stylesheet" href="styles.css" /> 
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <section class = "sub-header">
+            <nav>
+               <a href="index.html"><img src="images/logo.png"></a>
+                <div class = "nav-links" id="navLinks">
+                   <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="about-fork.html">About fork() in C</a></li>
+                        <li><a href="examples.html"> Animated Examples</a></li>
+                        <li><a href="resources.html">More Resources</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <h1>Animated Example #2</h1>
+        </section>
+        
+       
+        <!---Videoplayer-->
+        <section class = "video-player">
+            <div class="row">
+                <div class="vid-col">
+                   <img src="images/code-images/examAfork.png">
+                </div>
+                <div class="vid-col">
+                  <h1>The Hardworking Child</h1>
+                  <p>Try to hand trace the output of this code by drawing a fork diagram that keeps track of each process' changing x values and printf() statements. Assume that the program is run with argv[1] = 3. When you're ready to check your answer, press the button below and watch the animation to see how I draw a fork diagram for this program.</p>
+                  <div class="output">
+                      <a class="blue-btn" onclick="showO()">Show Answer</a>
+                      <a class="blue-btn" onclick="hideO()">Hide Answer</a>
+                      <p id="revoutput">2<br>2<br>4<br>2<br>2<br>4<br>4<br>8<br><br>Since these processes are running simultaneously, the printing order changes from one run to another. Your answer, however, should have the exact number of lines of output and the exact number of 2s, 4s, and 8s as the answer displayed above.</p>
+                 </div>
+                </div>
+            </div>
+            <h4>Now, click play to watch an animated visualization of this program. I choose to represent each process with a horizontal line, and each fork() call with a vertical line. Pay special attention to the return values of each fork() call, the printf() statements, and the changing values of the variable x:</h4>
+            <video controls>
+                <source src = "videos/examAfork.mov" type="video/mp4">
+            </video>
+        </section>
+
+        <!---footer-->
+        <section class = "footer"> 
+            <p><em>made with <i class="fa fa-heart-o"></i> by a former cs3157 student</em></p>
+        </section>
+         
+        <!--- javaScript for Toggle Menu --->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0px";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+         </script>
+
+        <!--- javaScript for revealing the output --->
+        <script>
+            var revoutput = document.getElementById("revoutput");
+            function showO(){
+                revoutput.style.color = "#020F49";
+            }
+            function hideO(){
+                revoutput.style.color = "#fff";
+            }
+        </script>
+    </body>
+ </html>
+
+         

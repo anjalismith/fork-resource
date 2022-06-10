@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <meta name = "viewport" content = "with=device-width, inital-scale=1.0">
+        <title> Build in HTML</title> 
+        <link rel="stylesheet" href="styles.css" /> 
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <section class = "sub-header">
+            <nav>
+               <a href="index.html"><img src="images/logo.png"></a>
+                <div class = "nav-links" id="navLinks">
+                   <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="about-fork.html">About fork() in C</a></li>
+                        <li><a href="examples.html"> Animated Examples</a></li>
+                        <li><a href="resources.html">More Resources</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <h1>Animated Examples</h1>
+        </section>
+        
+       
+        <!---Facilities-->
+        <section class = "examples">
+            <div class="row">
+                <div class ="examples-col">
+                    <img src="images/code-images/listentome.png">
+                    <h3><a href="listentome.html">Listen to me!</a></h3>
+                    <p>This is a simple forking program that simulates an argument between a parent and child. You will be learning how to trace fork() calls within for loops and understanding the different return values of fork() based on whether fork() is being called in a parent or child process.</p>
+                </div>
+                
+                <div class ="examples-col">
+                   <img src="images/code-images/examAfork.png">
+                   <h3><a href="hardworkingchild.html">The Hardworking Child</a></h3>
+                   <p>This is a simple forking program that takes user input and only executes certain lines of code if the process is a child process.</p>
+               </div>
+
+               <div class ="examples-col">
+                   <img src="images/code-images/fork=fork.png">
+                   <h3><a href="fork=fork.html">Fork()==Fork()</a></h3>
+                   <p>This is a forking problem that truly requires you to draw out a diagram to trace the output. You will encounter fork() statements within the condition of an if-statement and learn about the possible return values of a fork() call depending on which process calls it.</p>
+               </div>
+            </div>
+
+            <div class="row">
+                <div class ="examples-col">
+                    <img src="images/code-images/simplewait.png">
+                    <h3><a href="simple-waitpid.html">A Simple Wait</a></h3>
+                    <p>This is a simple forking program that introduces you to the waitpid() system call in C. The animated diagram is especially useful for this program because it will help you visualize the parent process waiting for the child process to terminate.</p>
+                </div>
+
+                <div class ="examples-col">
+                   <img src="images/code-images/starfork.png">
+                   <h3><a href="starfork.html">Starfork</a></h3>
+                   <p>This is an interesting forking problem that will require a diagram to trace the output. You will encounter additional function calls, fork() calls within a for-loop, and waitpid() calls.</p>
+               </div>
+
+               <div class ="examples-col">
+                   <img src="images/code-images/compsleep.png">
+                   <h3><a href="compsleeper.html">Sleepy Program</a></h3>
+                   <p>This is a complicated forking() program that will introduce you to the concept of sleep() calls. Watching the animated diagram for this example is crucial for understanding how each process executes simultaneously.</p>
+               </div>
+            </div>
+        </section>
+        
+        <!---footer-->
+        <section class = "footer"> 
+            <p><em>made with <i class="fa fa-heart-o"></i> by a former cs3157 student</em></p>
+        </section>
+         
+        <!--- javaScript for Toggle Menu --->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0px";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+    </body>
+</html>
+
+         

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <meta name = "viewport" content = "with=device-width, inital-scale=1.0">
+        <title> Build in HTML</title> 
+        <link rel="stylesheet" href="styles.css" /> 
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <section class = "sub-header">
+            <nav>
+               <a href="index.html"><img src="images/logo.png"></a>
+                <div class = "nav-links" id="navLinks">
+                   <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="about-fork.html">About fork() in C</a></li>
+                        <li><a href="examples.html"> Animated Examples</a></li>
+                        <li><a href="resources.html">More Resources</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <h1>More Resources</h1>
+        </section>
+        
+       
+        <!---Resources section------>
+        <section class="resources">
+            <div class="row">
+                <div class = "resources-col">
+                    <img src = "images/home/linux-hint.png">
+                    <div class="layer">
+                        <h3><a href="https://linuxhint.com/fork_linux_system_call_c/">linuxhint.com</a></h3>
+                    </div>
+                </div>
+                <div class = "resources-col">
+                    <img src = "images/home/sectionio.png">
+                    <div class="layer">
+                        <h3><a href="https://www.section.io/engineering-education/fork-in-c-programming-language/">section.io</a></h3>
+                    </div>
+                </div>
+                <div class = "resources-col">
+                    <img src = "images/home/code-vault.png">
+                    <div class="layer">
+                        <h3><a href="https://www.youtube.com/watch?v=cex9XrZCU14">Code Vault's Youtube Video</a></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class = "resources-col">
+                   <img src = "images/home/linux-man.png">
+                   <div class="layer">
+                        <h3><a href="https://man7.org/linux/man-pages/man2/fork.2.html">Linux Manual Page</a></h3>
+                   </div>
+               </div>
+               <div class = "resources-col">
+                    <img src = "images/home/gforg.png">
+                    <div class="layer">
+                        <h3><a href="https://www.geeksforgeeks.org/fork-system-call/">Geeks for Geeks</a></h3>
+                    </div>
+               </div>
+               <div class = "resources-col">
+                    <img src = "images/home/tutorialsp.png">
+                    <div class="layer">
+                        <h3><a href="https://www.tutorialspoint.com/fork-in-c">tutorialspoint.com</a></h3>                           
+                    </div>
+               </div>
+            </div>
+
+            <div class="row">
+                <div class = "resources-col">
+                    <img src = "images/home/fork-sim.png">
+                    <div class="layer">
+                        <h3><a href="http://lasdpc.icmc.usp.br/~ssc640/pos/fork-wait-exec-simulator/">Fork Simulator</a></h3>
+                   </div>
+               </div>
+               <div class = "resources-col">
+                    <img src = "images/home/linux-hint.png">
+                    <div class="layer">
+                        <h3><a href="https://linuxhint.com/c_fork_system_call/">linuxhint.com: writing your first fork() program</a></h3>
+                    </div>
+               </div>
+               <div class = "resources-col">
+                    <img src = "images/home/include-h.png">
+                    <div class="layer">
+                        <h3><a href="https://www.includehelp.com/c-programs/c-fork-function-linux-example.aspx">includehelp.com</a></h3>                           
+                    </div>
+               </div>
+            </div>
+        </section>
+
+        <!---footer-->
+        <section class = "footer"> 
+            <p><em>made with <i class="fa fa-heart-o"></i> by a former cs3157 student</em></p>
+        </section>
+         
+        <!--- javaScript for Toggle Menu --->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0px";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+    </body>
+</html>

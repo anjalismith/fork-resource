@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta name = "viewport" content = "with=device-width, inital-scale=1.0">
+         <title> Build in HTML</title> 
+         <link rel="stylesheet" href="styles.css" /> 
+         <link rel="preconnect" href="https://fonts.googleapis.com"> 
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+         <meta charset="UTF-8" />
+    </head>
+    <body>
+        <section class = "header">
+            <nav>
+                <a href="index.html"><img src="images/logo.png"></a>
+                <div class = "nav-links" id="navLinks">
+                   <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="about-fork.html">About fork() in C</a></li>
+                        <li><a href="examples.html"> Animated Examples</a></li>
+                        <li><a href="resources.html">More Resources</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <div class="title-page-text">
+                <h1>Fork() in C</h1>
+                <p>Welcome! I'm a resource to help beginner C programmers visualize the system call fork()<br>through code snippets, animations, and explanations.</p>
+                <a href="#how-to-sec" class="btn">Learn More</a>
+            </div>
+        </section>
+
+         <!---how to use this resource section-->
+        <section class="how-to" id="how-to-sec">
+            <h1>How to Use this Resource</h1>
+            <p>One of the toughest parts of tracing the output of a given code snippet that contains fork() calls is being able to draw an accurate diagram to represent the program. This website has a variety of code snippets and corresponding animations with detailed labels to help beginners learn how to visualize fork() calls in C. These examples progressively get more difficult, incorporating conditonal fork() calls, simultaneous forking, sleep() calls, and waitpid() calls. Here's how I reccomend getting started: </p>
+
+            <div class = "row">
+                <div class = "course-col">
+                    <h3>1. Read about fork()</h3>
+                    <p>To get started, refresh your memory on fork()'s function declaration and its purpose: </p>
+                    <a href="about-fork.html" class="btn">About fork()</a>
+                </div>
+                <div class = "course-col">
+                    <h3>2. Try it yourself</h3>
+                    <p>Next, browse through our examples and try to trace the output for each code snippet.</p>
+                </div>
+                <div class = "course-col">
+                    <h3>3. Press play</h3>
+                    <p>Lastly, check your answer and watch the corresponding animation to see how the given code can be represented through a diagram.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!---footer-->
+        <section class = "footer"> 
+            <p><em>made with <i class="fa fa-heart-o"></i> by a former cs3157 student</em></p>
+        </section>
+         
+        <!--- javaScript for Toggle Menu --->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0px";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+    </body>
+</html>
